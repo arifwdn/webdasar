@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Bricolage Grotesque";
+  font-size: 16px;
+  color: rgb(71, 71, 71);
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgb(255, 145, 145);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.logo a {
+  color: white;
+  font-size: 50px;
+}
+
+header > nav {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 61px;
+  right: 0;
+  left: 0;
+  transition: all 0.5s;
+  transform: translateY(-300px);
+  z-index: -1;
+}
+
+header.toggle-open > nav {
+  transform: translateY(0px);
+}
+
+header > nav a {
+  color: white;
+  display: block;
+  font-size: 20px;
+  border-bottom: solid white 1px;
+}
+
+header > nav a:hover {
+  font-weight: bold;
+  border-bottom: solid white 1px;
+}
+
+#bars {
+  display: inline;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header.toggle-open > #bars span:nth-child(1) {
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+header.toggle-open > #bars span:nth-child(2) {
+  transform: scale(0);
+  transform-origin: 0 100%;
+}
+header.toggle-open > #bars span:nth-child(3) {
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#bars span {
+  width: 30px;
+  height: 5px;
+  background-color: white;
+  transition: ease-in 0.2s;
+}
+
+@media only screen and (min-width: 768px) {
+  header > h1 {
+    font-size: 50px;
+  }
+
+  header > nav {
+    flex-direction: row;
+    position: static;
+    justify-content: end;
+    align-items: flex-end;
+    gap: 20px;
+  }
+
+  header > nav a {
+    display: inline;
+  }
+
+  #bars {
+    display: none;
+  }
+}
