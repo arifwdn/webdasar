@@ -13,12 +13,14 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "Bricolage Grotesque";
   font-size: 16px;
   color: var(--color-text);
   background-color: var(--body-bg-color);
+  overflow-x: hidden;
 }
 
 a {
@@ -39,9 +41,6 @@ header {
 .logo a {
   color: var(--color-header);
   font-size: 50px;
-}
-
-.logo a:hover {
   text-shadow: 3px 3px 5px var(--yellow-retro);
 }
 
@@ -106,6 +105,65 @@ header.toggle-open > #bars span:nth-child(3) {
   transition: ease-in 0.2s;
 }
 
+.cta {
+  background-color: var(--yellow-retro);
+}
+
+.jumbotron {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.jumbotron > h1 {
+  flex: none;
+  position: absolute;
+  display: block;
+  color: var(--color-header);
+  top: 45vh;
+  font-size: 50px;
+  width: 80%;
+  text-align: left;
+}
+.jumbotron > p {
+  flex: none;
+  position: absolute;
+  display: block;
+  color: var(--color-header);
+  top: 53vh;
+  width: 80%;
+  text-align: left;
+}
+
+.section {
+  padding: 5px;
+  padding-top: 100px;
+  height: 100vh;
+}
+
+.section > h1 {
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.section > p {
+  text-align: justify;
+}
+
+.section > p > img {
+  width: 340px;
+  float: left;
+  margin: 3px;
+}
+
 @media only screen and (min-width: 768px) {
   header > h1 {
     font-size: 50px;
@@ -135,5 +193,9 @@ header.toggle-open > #bars span:nth-child(3) {
 
   #bars {
     display: none;
+  }
+
+  .cta {
+    border-radius: 30px;
   }
 }
