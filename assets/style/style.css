@@ -289,13 +289,22 @@ aside {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background: linear-gradient(45deg, var(--header-bg-sm), var(--header-bg));
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+aside a {
+  color: white;
+  font-size: 25px;
 }
 
 .image-profile {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -305,8 +314,8 @@ aside {
 }
 
 .image-profile img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
   object-fit: cover;
 }
 
