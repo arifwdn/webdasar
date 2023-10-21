@@ -177,6 +177,7 @@ article > p > img {
   height: 42px;
   transition: all 0.5s;
   transform: scale(0);
+  border-radius: 10px;
 }
 
 footer {
@@ -291,7 +292,12 @@ aside {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background: linear-gradient(45deg, var(--header-bg-sm), var(--header-bg));
+  background: linear-gradient(
+    45deg,
+    var(--header-bg-sm),
+    var(--header-bg),
+    var(--yellow-retro)
+  );
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -300,6 +306,9 @@ aside {
 aside a {
   color: white;
   font-size: 25px;
+}
+aside a:hover {
+  text-shadow: 1px 1px 5px white;
 }
 
 .image-profile {
@@ -317,6 +326,18 @@ aside a {
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.text-profile > div {
+  margin: 10px 0px;
+}
+
+.text-profile {
+  margin: 30px;
+}
+.text-profile > div > b::before {
+  content: "| ";
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
